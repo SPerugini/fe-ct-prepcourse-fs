@@ -186,15 +186,26 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-   
+   const resultados = [];
+   for (let i = 0; i <= 10; i++) {
+   const resultado = 6 * i;
+   resultados.push(resultado);
 }
-
+  return resultados;
+}
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   const enterosMayoresACien = [];
+   for (let i = 0; i < array.length; i++) {
+      
+   if (array[i] > 100) { 
+      enterosMayoresACien.push(array[i]);
+   }
 }
-
+return enterosMayoresACien;
+}
 /* ----------------------------------------------------------------------------------
 💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
@@ -206,6 +217,18 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   const nuevosValores = [];
+
+   for (let i = 0; i < 10; i++) {
+     num += 2;
+     nuevosValores.push(num);
+ 
+     if (num === i) {
+       return "Se interrumpió la ejecución";
+     }
+   }
+ 
+   return nuevosValores;
 }
 
 function continueStatement(num) {
@@ -215,7 +238,18 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   const nuevosValores = [];
+
+   for (let i = 0; i < 10; i++) {
+     if(i === 5) {
+         continue;
+      }
+      num += 2;
+      nuevosValores.push(num);
+   }
+   return nuevosValores;
 }
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
